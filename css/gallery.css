@@ -1,0 +1,381 @@
+@import url('../css/fonts.css');
+
+html, body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* Theme font-family */
+    --Abel: 'Abel',cursive;
+    --Anton: 'Anton',cursive;
+    --Josefin: 'Josefin',cursive;
+    --Lexend: 'Lexend',cursive;
+    --Livvic: 'Livvic',cursive;
+}
+
+/*-------------- Global Classes -----------*/
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--Lexend);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+a.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+    color: black;
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 0 5vw;
+}
+
+p {
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+/*-------------- Global Classes -----------*/
+
+/*-------------- nav bar ------------------*/
+
+.nav {
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a {
+    color: var(--white);
+}
+
+.nav .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+}
+
+.nav .social i {
+    padding: 0.2rem;
+}
+
+.nav .social i:hover {
+    color: #a1c4cf;
+}
+/*-------------- nav bar ------------------*/
+
+
+/* ------------- Main Content ------------ */
+
+/* ------------ Country Cards------------- */
+
+.gallery {
+    background: url('../assets/gallery_background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cards {
+    width: 20%;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border-radius: 5px;
+    margin: 40px;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    display: inline-block;
+}
+
+.country-image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.country-name {
+    text-align: center;
+    padding: 5px;
+}
+
+.country-name h1 {
+    margin: 0;
+}
+
+.country-desc {
+    text-align: center;
+    padding: 4px;
+}
+
+.country-desc p{
+    margin: 0;
+}
+
+.btn-gallery {
+    background: var(--sky);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.btn-gallery:hover {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/* ------------ Country Cards------------- */
+
+/* ------------- Main Content ------------ */
+
+
+/*-------------- Footer -------------------*/
+
+footer.footer {
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+footer.footer .container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+
+footer.footer .container h2 {
+    color: var(--white);
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element button {
+    background: var(--sky);
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: 0.3rem 0.4rem;
+}
+
+footer.footer .follow div i {
+    color: var(--white);
+    padding: 0.4rem;
+}
+
+footer.footer .rights {
+    justify-content: center;
+    font-family: var(--Josefin);
+}
+
+/*-------------- Footer -------------------*/
+
+
+
+/*            Viewport <= 1213             */
+
+@media only screen and (max-width: 1213px) {
+    main .gallery-container .cards {
+        flex: 25%;
+    }
+}
+
+/*            Viewport <= 1213             */
+
+
+
+/*            Viewport <= 1130             */
+
+@media only screen and (max-width: 1130px) {
+    footer.footer .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/*            Viewport <= 1130             */
+
+
+/*            Viewport <= 750px            */
+
+@media only screen and (max-width: 750px) {
+    .nav .nav-menu,.nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: initial;
+    }
+
+    footer.footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .gallery-container .cards {
+        flex: 25%;
+    }
+
+}
+
+/*            Viewport <= 750px            */
+
+
+/*            Viewport <= 520px            */
+
+@media only screen and (max-width: 520px) {
+
+    footer.footer .container > div {
+        padding: 1rem 0.9rem !important;
+    }
+
+    footer .rights {
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse {
+        width: 80% !important;
+    }
+
+    main .gallery-container .cards {
+        flex: 100%;
+    }
+
+}
+
+/*            Viewport <= 520px            */
